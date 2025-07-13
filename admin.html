@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flipr Portfolio</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="hero">
+  <h1>🚀 Flipr Project Showcase</h1>
+  <p>Modern solutions crafted for teams and creators</p>
+</header>
+
+<div class="container">
+
+  <!-- Projects Section -->
+  <div class="section" id="projects">
+    <h2>💻 Featured Projects</h2>
+    <div id="projectList" class="card-grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/800x400/?dashboard" alt="TaskFlow" />
+        <div class="card-body">
+          <h3>TaskFlow</h3>
+          <p>Kanban-style task manager for agile teams.</p>
+          <button class="btn">Explore</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/800x400/?invoice" alt="Invoicely" />
+        <div class="card-body">
+          <h3>Invoicely</h3>
+          <p>Create and manage invoices on the go.</p>
+          <button class="btn">Explore</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/800x400/?developer,app" alt="DevConnect" />
+        <div class="card-body">
+          <h3>DevConnect</h3>
+          <p>Social hub for developers to share & connect.</p>
+          <button class="btn">Explore</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Clients Section -->
+  <div class="section" id="clients">
+    <h2>🤝 Happy Clients</h2>
+    <div id="clientList" class="card-grid">
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" />
+        <div class="card-body">
+          <h3>Sarah Williams</h3>
+          <p><strong>BrightPath</strong></p>
+          <p>“Ahead of schedule, stunning UI. Loved working with them!”</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/men/48.jpg" />
+        <div class="card-body">
+          <h3>David Chen</h3>
+          <p><strong>CodeCrate</strong></p>
+          <p>“Delivered what we dreamed of — on point, fast, beautiful.”</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" />
+        <div class="card-body">
+          <h3>Isabella Gomez</h3>
+          <p><strong>ZenSoft</strong></p>
+          <p>“Great UX, communication and results. 10/10.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact & Subscribe -->
+  <div class="section contact-subscribe">
+    <div class="contact-form">
+      <h2>📞 Contact</h2>
+      <form id="contactForm">
+        <input name="full_name" type="text" placeholder="Your Name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="mobile" type="tel" placeholder="Phone" required />
+        <input name="city" type="text" placeholder="City" required />
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+    <div class="subscribe-form">
+      <h2>📬 Subscribe</h2>
+      <form id="subscribeForm">
+        <input name="email" type="email" placeholder="you@example.com" required />
+        <button type="submit" class="btn">Join</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Flipr Internship Project • Built with 💙</p>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

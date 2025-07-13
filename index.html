@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flipr Portfolio</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <h1>🚀 Flipr Project Showcase</h1>
+    <p>Modern solutions for innovative teams</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Featured Projects -->
+    <div class="section" id="projects">
+      <h2>💻 Featured Projects</h2>
+      <div class="card-grid">
+        <div class="card project-card">
+          <div class="badge badge-new">New</div>
+          <img src="https://source.unsplash.com/800x400/?kanban,dashboard" class="project-img" alt="TaskFlow Project Image"/>
+          <div class="card-body">
+            <h3>🗂️ TaskFlow</h3>
+            <p>Modern Kanban board for agile teams. Real-time sync & drag-n-drop.</p>
+            <button class="btn">Read More</button>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="badge badge-pro">Pro</div>
+          <img src="https://source.unsplash.com/800x400/?invoice,finance" class="project-img" alt="Invoicely Project Image"/>
+          <div class="card-body">
+            <h3>💸 Invoicely</h3>
+            <p>Cloud-based invoicing for freelancers & small businesses.</p>
+            <button class="btn">Explore</button>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="badge badge-community">Community</div>
+          <img src="https://source.unsplash.com/800x400/?developer,community" class="project-img" alt="DevConnect Project Image"/>
+          <div class="card-body">
+            <h3>👨‍💻 DevConnect</h3>
+            <p>Social platform for developers to share projects & ideas.</p>
+            <button class="btn">Join</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Happy Clients -->
+    <div class="section" id="clients">
+      <h2>🤝 Happy Clients</h2>
+      <div class="card-grid">
+        <div class="card testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/45.jpg" class="avatar" alt="Sarah Williams" />
+          <div class="card-body">
+            <h3>Sarah Williams</h3>
+            <p><strong>Marketing, BrightPath</strong></p>
+            <p>"Brilliant team. Fast delivery and beautiful UI."</p>
+          </div>
+        </div>
+        <div class="card testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/48.jpg" class="avatar" alt="David Chen" />
+          <div class="card-body">
+            <h3>David Chen</h3>
+            <p><strong>Founder, CodeCrate</strong></p>
+            <p>"They nailed the UX — exactly what I had in mind."</p>
+          </div>
+        </div>
+        <div class="card testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" class="avatar" alt="Isabella Gomez" />
+          <div class="card-body">
+            <h3>Isabella Gomez</h3>
+            <p><strong>CTO, ZenSoft</strong></p>
+            <p>"Fun, creative, and professional. Would hire again."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact + Subscribe Split Layout -->
+    <div class="section contact-subscribe split">
+      <div class="half contact-form">
+        <h2>📞 Contact Us</h2>
+        <form method="POST" id="contactForm">
+          {% csrf_token %}
+          {{ contact_form.as_p }}
+          <button type="submit" class="btn">Send</button>
+        </form>
+        {% if contact_success %}
+          <p class="success-message">Thank you for contacting us!</p>
+        {% endif %}
+      </div>
+
+      <div class="half subscribe-form">
+        <h2>📬 Subscribe</h2>
+        <form method="POST" id="subscribeForm">
+          {% csrf_token %}
+          {{ subscribe_form.as_p }}
+          <button type="submit" class="btn">Subscribe</button>
+          <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Stay updated on launches ✨</p>
+        </form>
+        {% if subscribe_success %}
+          <p class="success-message">Thanks for subscribing!</p>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Flipr Fullstack Project | Designed with 💙</p>
+  </footer>
+
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

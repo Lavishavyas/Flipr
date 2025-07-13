@@ -1,0 +1,2 @@
+document.getElementById('projectForm').onsubmit=e=>{e.preventDefault();fetch('/projects/add/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(e.target)))})};
+document.getElementById('clientForm').onsubmit=e=>{e.preventDefault();fetch('/clients/add/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(e.target)))})};
